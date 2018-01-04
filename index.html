@@ -17,7 +17,7 @@
       
       <button id="sign-in">Sign In</button>
       <button id="sign-out" hidden>Sign Out</button>
-       <button id="Button1" >test a</button>
+       <button id="Button1" onclick="myFunction()" >test a</button>
 
       <button id="subscribe" hidden>
         Subscribe
@@ -44,6 +44,13 @@
     </footer>
   </div>
 
+
+
+  <script>
+      function myFunction() {
+          alert("I am an alert box!");
+      }
+</script>
 
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-auth.js"></script>
