@@ -76,15 +76,24 @@ const messaging = firebase.messaging();
 
 messaging.requestPermission()
 
+/*
 .then(function() {
   //alert('Notification permission granted.');
-   alert(messaging.getToken().toString())
+   alert(messaging.getToken())
   return messaging.getToken();
  
   
   // TODO(developer): Retrieve an Instance ID token for use with FCM.
   // ...
-})
+})*/
+
+  .then(function(){
+    alert('I am in here');
+    //You must return the token
+  return  messaging.getToken()
+  .then(function(currentToken) {
+    alert(currentToken);
+  })
 
 
 .catch(function(err) {
