@@ -71,10 +71,10 @@
     firebase.initializeApp(config);
 
     // Retrieve Firebase Messaging object.
-const messaging = firebase.messaging();
+const FIREBASE_MESSAGING = firebase.messaging();
 
 
-messaging.requestPermission()
+FIREBASE_MESSAGING.requestPermission()
 
 
 .then(function() {
@@ -82,7 +82,7 @@ messaging.requestPermission()
  /* return messaging.getToken();
    alert(messaging.getToken())*/
      
-     return messaging.getToken().then((token) => {
+     return FIREBASE_MESSAGING.getToken().then((token) => {
    // alert(token);
    alert("new1");
     });
