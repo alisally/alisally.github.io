@@ -107,48 +107,10 @@ function subscribeToNotifications() {
 
 function handleTokenRefresh() {
  
- // On load register service worker
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/firebase-messaging-sw.js').then((registration) => {
-      // Successfully registers service worker
-     // console.log('ServiceWorker registration successful with scope: ', registration.scope);
-   alert  ('ServiceWorker registration successful with scope: '+ registration.scope);
-      FIREBASE_MESSAGING.useServiceWorker(registration);
-    })
-    .then(() => {
-      // Requests user browser permission
-      return FIREBASE_MESSAGING.requestPermission();
-    })
-    .then(() => {
-      // Gets token
-      return FIREBASE_MESSAGING.getToken();
-    })
-    .then((token) => {
-    alert("yes exists");
-    /*  // Simple ajax call to send user token to server for saving
-      $.ajax({
-        type: 'POST',
-        url: '/api/setToken',
-        dataType: 'json',
-        data: JSON.stringify({token: token}),
-        contentType: 'application/json',
-        success: (data) => {
-          console.log('Success ', data);
-        },
-        error: (err) => {
-          console.log('Error ', err);
-        }
-      })*/
-    })
-    .catch((err) => {
-      alert(err.toString());
-    });
-  });
-  }
 
 
- // return FIREBASE_MESSAGING.getToken();
+
+ return FIREBASE_MESSAGING.getToken();
  //alert("heloooooooo");
    /* FIREBASE_DATABASE.ref('/tokens').push({
       token: token,
