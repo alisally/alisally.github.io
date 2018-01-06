@@ -17,7 +17,6 @@
       
       <button id="sign-in">Sign In</button>
       <button id="sign-out" hidden>Sign Out</button>
-       <button id="Button1" onclick="myFunction()" >test a</button>
 
       <button id="subscribe" hidden>
         Subscribe
@@ -44,72 +43,10 @@
     </footer>
   </div>
 
-
-
-  <script>
-      function myFunction() {
-          alert("I am an alert box!");
-      }
-</script>
-
-  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js"></script>
-
-  <script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyD4_zMt8NByD4zsxQ8Ugw3NB9MrQN5vfiI",
-        authDomain: "beautycenter-bb072.firebaseapp.com",
-        databaseURL: "https://beautycenter-bb072.firebaseio.com",
-        projectId: "beautycenter-bb072",
-        storageBucket: "beautycenter-bb072.appspot.com",
-        messagingSenderId: "129581670274"
-    };
-    firebase.initializeApp(config);
-
-    // Retrieve Firebase Messaging object.
-const messaging = firebase.messaging();
-
-
-messaging.requestPermission()
-
-
-.then(function() {
-  //alert('Notification permission granted.');
- /* return messaging.getToken();
-   alert(messaging.getToken())*/
-       alert("hello ali");
-  /*   return messaging.getToken().then((token) => {
-    alert(token);
-    });*/
-  
- 
-  
-  // TODO(developer): Retrieve an Instance ID token for use with FCM.
-  // ...
-});
-
- /* return  messaging.getToken()
-  .then(function(currentToken) {
-    alert(currentToken);
-  })
-  */
-/*
-.catch(function(err) {
-  alert('Unable to get permission to notify.', err);
-});
-*/
-
-
-</script>
-
   <!-- Firebase SDK -->
   <script src="/__/firebase/4.1.3/firebase.js"></script>
   <script src="/__/firebase/init.js"></script>
 
-<!--  <script src="/js/main.js"></script>-->
+  <script src="/js/main.js"></script>
 </body>
 </html>
