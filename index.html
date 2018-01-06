@@ -94,7 +94,7 @@ function subscribeToNotifications() {
 function handleTokenRefresh() {
   
   return FIREBASE_MESSAGING.getToken().then((token) => {
-  alert("exists");
+  alert("yes exists");
     /*FIREBASE_DATABASE.ref('/tokens').push({
       token: token,
       uid: FIREBASE_AUTH.currentUser.uid
