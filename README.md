@@ -1,43 +1,71 @@
-# simple-firebase-notifications
+# Simply Notify
 
-### Get Started
+<img width="879" alt="Simply Notify" src="https://user-images.githubusercontent.com/8677283/30519696-870648d4-9b94-11e7-8180-ca35f2813528.png">
 
-1. Clone this repo
-2. npm install
-3. Fill in your firebase keys in:
-  - firebase-messaging-sw.js
-  - notification.js
-4. node server.js
-5. Open your browser to localhost:3000
-6. Upon opening your browser, the service worker should have installed and automatically sent your browser token to the server. You will need the token to send notifications to your browser (limited browser support, see limitations below)
+[Simply Notify](https://simply-notify.firebaseapp.com) is a simple app that demonstrates how to implement Web Push Notifications using Firebase end-to-end.
+
+## The Video Series
+
+You can watch how this application was made by following along with the video series.
+
+[**Clone the Start Branch**](https://github.com/ireade/simply-notify/tree/start) to get started.
 
 
-### Sending Notifications
+<table>
+  <tbody>
+    <tr>
+      <!-- Video 1 -->
+      <td align="center">
+        <a href="https://www.youtube.com/watch?v=XdzXaW8IbBM">
+          <img width="290" alt="Simply Notify" src="http://bitsofco.de/content/images/2017/09/Thumbnail-1.png">
+          <br>
+          Introduction & Firebase Setup
+        </a>
+      </td>
+      <!-- Video 2 -->
+      <td align="center">
+        <a href="https://www.youtube.com/watch?v=cnwuYeCqni0">
+          <img width="290" alt="Simply Notify" src="http://bitsofco.de/content/images/2017/09/Thumbnail-2.png">
+          <br>
+          Authentication
+        </a>
+      </td>
+      <!-- Video 3 -->
+      <td align="center">
+        <a href="https://www.youtube.com/watch?v=a50fz6oiLCQ">
+          <img width="290" alt="Simply Notify" src="http://bitsofco.de/content/images/2017/09/Thumbnail-3.png">
+          <br>
+          Notification Subscriptions
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <!-- Video 4 -->
+      <td align="center">
+        <a href="https://www.youtube.com/watch?v=YCMtarwgNIo">
+          <img width="290" alt="Simply Notify" src="http://bitsofco.de/content/images/2017/09/Thumbnail-4.png">
+          <br>
+          Creating & Saving Messages
+        </a>
+      </td>
+      <!-- Video 5 -->
+      <td align="center">
+        <a href="https://www.youtube.com/watch?v=rumJsnHbXsI">
+          <img width="290" alt="Simply Notify" src="http://bitsofco.de/content/images/2017/09/Thumbnail-5.png">
+          <br>
+          Sending Web Notifications
+        </a>
+      </td>
+      <!-- Video 6 -->
+      <td align="center">
+        <a href="https://www.youtube.com/watch?v=4BJ-Ey9aVrM">
+          <img width="290" alt="Simply Notify" src="http://bitsofco.de/content/images/2017/09/Thumbnail-6.png">
+          <br>
+          Database Security & Optimisations
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-1. curl from your terminal:
-```
-curl -X POST --header "Authorization: key=[FIREBASE_SERVER_KEY]" --Header "Content-Type:application/json" https://fcm.googleapis.com/fcm/send -d "{\"to\":\"[BROWSER_TOKEN_KEY]\",\"data\":{\"notification\":{\"body\":\"Are you coming to our party?\",\"title\":\"This is a tester tester\",\"confirm\":\"https://developers.google.com/web/\",\"decline\":\"https://www.yahoo.com/\"}},\"priority\":10}"
-```
-  - make sure to enter your [firebase authorization key (your server key)](https://firebase.google.com/docs/cloud-messaging/server#auth) in the field of 'Authorization: key=' and your browser token in the 'to' field (don't include the [])
-  - to ensure your data is passed through correctly, ensure your body looks like:
-```
-  "{
-      "to": "", //browser token here
-      "data": {
-        "notification": {
-          "body": "Are you coming to our party?",
-          "title": "This is a tester tester".
-          "confirm": "https://developers.google.com/web/",
-          "decline": "https://www.yahoo.com/"
-        }
-      },
-      "priority": 10
-  }"
-```
 
-### Limitations
-
-According to [Firebase documentation](https://firebase.google.com/docs/cloud-messaging/js/client): The FCM JavaScript API lets you receive notification messages in web apps running in these browsers:
-- Chrome: 50+
-- Firefox: 44+
-- Opera Mobile: 37+
