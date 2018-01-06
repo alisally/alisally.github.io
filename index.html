@@ -92,7 +92,7 @@ function subscribeToNotifications() {
 
 
 function handleTokenRefresh() {
-  alert("hello every one");
+  alert(IREBASE_MESSAGING.getToken());
  /* return FIREBASE_MESSAGING.getToken().then((token) => {
 
     FIREBASE_DATABASE.ref('/tokens').push({
