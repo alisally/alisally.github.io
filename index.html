@@ -82,7 +82,7 @@ messaging.requestPermission()
  /* return messaging.getToken();
    alert(messaging.getToken())*/
 
-     return FIREBASE_MESSAGING.getToken().then((token) => {
+     return messaging.getToken().then((token) => {
     alert(token);
     });
   
