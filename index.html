@@ -114,15 +114,15 @@ if ('serviceWorker' in navigator) {
       // Successfully registers service worker
      // console.log('ServiceWorker registration successful with scope: ', registration.scope);
    alert  ('ServiceWorker registration successful with scope: '+ registration.scope);
-      messaging.useServiceWorker(registration);
+      FIREBASE_MESSAGING.useServiceWorker(registration);
     })
     .then(() => {
       // Requests user browser permission
-      return messaging.requestPermission();
+      return FIREBASE_MESSAGING.requestPermission();
     })
     .then(() => {
       // Gets token
-      return messaging.getToken();
+      return FIREBASE_MESSAGING.getToken();
     })
     .then((token) => {
     alert("yes exists");
