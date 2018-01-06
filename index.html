@@ -73,36 +73,35 @@
     // Retrieve Firebase Messaging object.
 const FIREBASE_MESSAGING = firebase.messaging();
 
+const signInButton = document.getElementById('sign-in');
+
+signInButton.addEventListener("click", subscribeToNotifications);
+
+
 
 FIREBASE_MESSAGING.requestPermission()
 
-
-.then(function() {
-  //alert('Notification permission granted.');
- /* return messaging.getToken();
-   alert(messaging.getToken())*/
-     
-     return FIREBASE_MESSAGING.getToken().then((token) => {
-   // alert(token);
-   alert("new1");
+function subscribeToNotifications() {
+  FIREBASE_MESSAGING.requestPermission()
+    .then(() => handleTokenRefresh())
+   // .then(() => checkSubscription())
+    .catch((err) => {
+      alert("error getting permission :(");
     });
-  
- 
-  
-  // TODO(developer): Retrieve an Instance ID token for use with FCM.
-  // ...
-});
+}
 
- /* return  messaging.getToken()
-  .then(function(currentToken) {
-    alert(currentToken);
-  })
-  */
-/*
-.catch(function(err) {
-  alert('Unable to get permission to notify.', err);
-});
-*/
+
+function handleTokenRefresh() {
+  return FIREBASE_MESSAGING.getToken().then((token) => {
+  alert("hello every one");
+   /* FIREBASE_DATABASE.ref('/tokens').push({
+      token: token,
+      uid: FIREBASE_AUTH.currentUser.uid
+    });*/
+  });
+}
+
+
 
 
 </script>
