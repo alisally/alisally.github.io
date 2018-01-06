@@ -58,7 +58,7 @@ function signOut() {
 
 function handleTokenRefresh() {
   return FIREBASE_MESSAGING.getToken().then((token) => {
-  alert(token);
+  alert("hello every body");
 
    /* FIREBASE_DATABASE.ref('/tokens').push({
       token: token,
