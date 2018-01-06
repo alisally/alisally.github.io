@@ -1,8 +1,16 @@
 {
-  "name": "simply-notify",
+  "name": "simple-firebase-notifications",
   "version": "1.0.0",
-  "description": "A simple application to send notifications to everyone subscribe. It's simple. It's useless. It's simply notify.",
-  "main": "js/main.js",
-  "author": "BeautyCenter",
-  "license": "ISC"
+  "description": "Simple firebase push notifications web app using Firebase Cloud Messaging (FCM) JavaScript API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Sabrina Tee",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  }
 }
