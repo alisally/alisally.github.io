@@ -87,9 +87,6 @@ messaging.requestPermission()
   // ...
 })*/
 
-  .then(function(){
-    alert('I am in here');
-    //You must return the token
   return  messaging.getToken()
   .then(function(currentToken) {
     alert(currentToken);
