@@ -83,7 +83,7 @@ function checkSubscription() {
 function subscribeToNotifications() {
   FIREBASE_MESSAGING.requestPermission()
     .then(() => handleTokenRefresh())
-    .then(() => checkSubscription())
+   // .then(() => checkSubscription())
     .catch((err) => {
       console.log("error getting permission :(");
     });
