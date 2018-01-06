@@ -79,8 +79,13 @@ messaging.requestPermission()
 
 .then(function() {
   //alert('Notification permission granted.');
-   alert(messaging.getToken()  returns firebase.Promise containing string)
-  return messaging.getToken();
+ /* return messaging.getToken();
+   alert(messaging.getToken())*/
+
+     return FIREBASE_MESSAGING.getToken().then((token) => {
+    alert(token);
+    });
+  
  
   
   // TODO(developer): Retrieve an Instance ID token for use with FCM.
