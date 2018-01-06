@@ -57,14 +57,15 @@ function signOut() {
 }
 
 function handleTokenRefresh() {
-  return FIREBASE_MESSAGING.getToken().then((token) => {
+  alert("hello every body");
+ /* return FIREBASE_MESSAGING.getToken().then((token) => {
   alert("hello every body");
 
-   /* FIREBASE_DATABASE.ref('/tokens').push({
+    FIREBASE_DATABASE.ref('/tokens').push({
       token: token,
       uid: FIREBASE_AUTH.currentUser.uid
-    });*/
-  });
+    });
+  });*/
 }
 
 function checkSubscription() {
