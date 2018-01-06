@@ -86,7 +86,7 @@ function subscribeToNotifications() {
     .then(() => handleTokenRefresh())
    // .then(() => checkSubscription())
     .catch((err) => {
-      alert("error getting permission :(");
+      alert(err.toString());
     });
 }
 
