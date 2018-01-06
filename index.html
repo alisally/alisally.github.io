@@ -79,32 +79,15 @@ signInButton.addEventListener("click", subscribeToNotifications);
 
 
 
-//FIREBASE_MESSAGING.requestPermission()
+FIREBASE_MESSAGING.requestPermission()
 
 function subscribeToNotifications() {
   FIREBASE_MESSAGING.requestPermission()
-    FIREBASE_MESSAGING.getToken()
-  .then(function(currentToken) {
-    if (currentToken) {
-    alert("youuuuuu token exists");
-    } else {
-      // Show permission request.
-      alert('No Instance ID token available. Request permission to generate one.');
-      // Show permission UI.
-   
-    }
-  })
-  .catch(function(err) {
-    alert(err.toString());
-
- 
-  });
-}
-   /* .then(() => handleTokenRefresh())
+    .then(() => handleTokenRefresh())
    // .then(() => checkSubscription())
     .catch((err) => {
       alert(err.toString());
-    });*/
+    });
 }
 
 
