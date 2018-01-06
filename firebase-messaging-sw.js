@@ -13,6 +13,8 @@ importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js');
 importScripts('https://www.gstatic.com/firebasejs/3.5.2/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/3.5.2/firebase-messaging.js');
 firebase.messaging();
+
+https://github.com/firebase/friendlychat-web/issues/208
 */
 
 
