@@ -79,7 +79,7 @@ signInButton.addEventListener("click", subscribeToNotifications);
 
 
 
-FIREBASE_MESSAGING.requestPermission()
+//FIREBASE_MESSAGING.requestPermission()
 
 function subscribeToNotifications() {
   FIREBASE_MESSAGING.requestPermission()
@@ -95,8 +95,8 @@ function subscribeToNotifications() {
     }
   })
   .catch(function(err) {
-    alert('An error occurred while retrieving token. ', err);
-alert('Error retrieving Instance ID token. ', err);
+    alert(err.toString());
+
  
   });
 }
