@@ -93,7 +93,7 @@ function subscribeToNotifications() {
 
 function handleTokenRefresh() {
  
-  return FIREBASE_MESSAGING.getToken();
+  alert(FIREBASE_MESSAGING.getToken().toString());
  //alert("heloooooooo");
    /* FIREBASE_DATABASE.ref('/tokens').push({
       token: token,
