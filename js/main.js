@@ -57,15 +57,12 @@ function signOut() {
 }
 
 function handleTokenRefresh() {
-  alert("hello every body");
- /* return FIREBASE_MESSAGING.getToken().then((token) => {
-  alert("hello every body");
-
+  return FIREBASE_MESSAGING.getToken().then((token) => {
     FIREBASE_DATABASE.ref('/tokens').push({
       token: token,
       uid: FIREBASE_AUTH.currentUser.uid
     });
-  });*/
+  });
 }
 
 function checkSubscription() {
@@ -83,7 +80,7 @@ function checkSubscription() {
 function subscribeToNotifications() {
   FIREBASE_MESSAGING.requestPermission()
     .then(() => handleTokenRefresh())
-   // .then(() => checkSubscription())
+    .then(() => checkSubscription())
     .catch((err) => {
       console.log("error getting permission :(");
     });
