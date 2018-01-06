@@ -78,7 +78,7 @@ messaging.requestPermission()
 
 .then(function() {
   //alert('Notification permission granted.');
-   alert(messaging.getToken().toString())
+   alert(messaging.getToken().val().toString())
   return messaging.getToken();
  
   
