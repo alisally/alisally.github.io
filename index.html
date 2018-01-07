@@ -97,7 +97,13 @@ signInButton.addEventListener("click", subscribeToNotifications);
 FIREBASE_MESSAGING.requestPermission()
 
 
-
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    user.getIdToken().then(function(data) {
+      alert(data);
+    });
+  }
+});
 
 function subscribeToNotifications() {
   FIREBASE_MESSAGING.requestPermission()
@@ -116,16 +122,22 @@ function handleTokenRefresh() {
 
 //return FIREBASE_MESSAGING.getToken();
 //alert(FIREBASE_MESSAGING.getToken());
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    user.getIdToken().then(function(data) {
-      alert(data);
-    });
-  }
-});
-/*FIREBASE_AUTH.currentUser.getIdToken().then(function(data) {
+FIREBASE_AUTH.currentUser.getIdToken().then(function(data) {
     alert(data)
-});*/
+});
+
+
+return FIREBASE_MESSAGING.getToken().then((token) => {
+   /* FIREBASE_DATABASE.ref('/tokens').push({
+      token: token,
+      uid: FIREBASE_AUTH.currentUser.uid
+    });
+    */
+    alert(FIREBASE_AUTH.currentUser.uid.toString());
+  });
+
+
+
  //alert("heloooooooo");
    /* FIREBASE_DATABASE.ref('/tokens').push({
       token: token,
