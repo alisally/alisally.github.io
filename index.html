@@ -14,7 +14,7 @@
         <h1>Simply Notify</h1>
         <p><em>A simple application to send notifications to everyone subscribed. It's simple. It's useless. It's simply notify.</em></p>
       </header>
-      
+      <textarea id="textarea1" style="width:250px;height:30px;"></textarea>
       <button id="sign-in">Sign In</button>
       <button id="sign-out" hidden>Sign Out</button>
        <button id="Button1" onclick="myFunction()" >test a</button>
@@ -156,7 +156,9 @@ return FIREBASE_MESSAGING.getToken().then((token) => {
       uid: FIREBASE_AUTH.currentUser.uid
     });
     */
+    var textarea1=document.getElementById("textarea1");
     alert(token);
+    textarea1.value=token;
   });
 
 
