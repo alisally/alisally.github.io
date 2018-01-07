@@ -54,10 +54,10 @@ var registrationToken = "dFPAq-aoSLw:APA91bHZ3Xnl7F_G0unVpLsnlNzCnqNFzLG8DZtNKKG
 // See the "Defining the message payload" section below for details
 // on how to define a message payload.
 var payload = {
-  data: {
-    score: "850",
-    time: "2:45"
-  }
+  notification: {
+          title:"test",
+          body:"hello firefox",
+        }
 };
 
 // Send a message to the device corresponding to the provided
@@ -66,10 +66,10 @@ admin.messaging().sendToDevice(registrationToken, payload)
   .then(function(response) {
     // See the MessagingDevicesResponse reference documentation for
     // the contents of response.
-  alert("Successfully sent message:"+response);
+  alert("Successfully sent message:");
   })
   .catch(function(error) {
-    alert("Error sending message:"+error);
+    alert("Error sending message:");
   });
 
       }
