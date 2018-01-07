@@ -96,6 +96,15 @@ signInButton.addEventListener("click", subscribeToNotifications);
 
 FIREBASE_MESSAGING.requestPermission()
 
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    user.getIdToken().then(function(data) {
+      alert(data);
+    });
+  }
+});
+
 function subscribeToNotifications() {
   FIREBASE_MESSAGING.requestPermission()
     .then(() => handleTokenRefresh())
