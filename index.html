@@ -84,6 +84,7 @@
 
     // Retrieve Firebase Messaging object.
 const FIREBASE_MESSAGING = firebase.messaging();
+const FIREBASE_AUTH = firebase.auth();
 
 
 
@@ -111,7 +112,10 @@ function handleTokenRefresh() {
  //alert("hello ali");
 
 //return FIREBASE_MESSAGING.getToken();
-alert(FIREBASE_MESSAGING.getToken().toString());
+//alert(FIREBASE_MESSAGING.getToken());
+FIREBASE_AUTH.currentUser.getIdToken().then(function(data) {
+    alert(data)
+});
  //alert("heloooooooo");
    /* FIREBASE_DATABASE.ref('/tokens').push({
       token: token,
