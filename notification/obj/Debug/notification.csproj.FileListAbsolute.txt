@@ -1,0 +1,5 @@
+c:\users\mp\documents\visual studio 2010\Projects\notification\notification\bin\notification.dll
+c:\users\mp\documents\visual studio 2010\Projects\notification\notification\bin\notification.pdb
+c:\users\mp\documents\visual studio 2010\Projects\notification\notification\obj\Debug\notification.dll
+c:\users\mp\documents\visual studio 2010\Projects\notification\notification\obj\Debug\notification.pdb
+C:\Users\MP\Documents\Visual Studio 2010\Projects\notification\notification\obj\Debug\notification.csprojResolveAssemblyReference.cache
